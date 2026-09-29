@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minhas Finanças</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/vendor/chart.js/chart.umd.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">💰 <span>Minhas Finanças</span></div>
+      <nav class="nav">
+        <a href="#/dashboard" data-rota="dashboard"><span class="ico">📊</span>Painel</a>
+        <a href="#/transacoes" data-rota="transacoes"><span class="ico">💸</span>Transações</a>
+        <a href="#/contas" data-rota="contas"><span class="ico">🏦</span>Contas</a>
+        <a href="#/categorias" data-rota="categorias"><span class="ico">🏷️</span>Categorias</a>
+        <a href="#/orcamentos" data-rota="orcamentos"><span class="ico">🎯</span>Orçamentos</a>
+        <a href="#/metas" data-rota="metas"><span class="ico">🐷</span>Metas</a>
+        <a href="#/importar" data-rota="importar"><span class="ico">📥</span>Importar extrato</a>
+        <a href="#/relatorios" data-rota="relatorios"><span class="ico">📈</span>Relatórios</a>
+        <a href="#/configuracoes" data-rota="configuracoes"><span class="ico">⚙️</span>Dados e backup</a>
+      </nav>
+      <button class="btn btn-ghost tema" id="btn-tema" type="button">🌓 Alternar tema</button>
+    </aside>
+
+    <div class="principal">
+      <header class="topo">
+        <button class="btn btn-ghost menu" id="btn-menu" type="button" aria-label="Abrir menu">☰</button>
+        <h1 id="titulo-pagina">Painel</h1>
+        <button class="btn btn-primario" id="btn-nova-transacao" type="button">+<span class="esconde-mobile"> Nova transação</span></button>
+      </header>
+      <main id="conteudo" class="conteudo"></main>
+    </div>
+  </div>
+
+  <div id="modal-raiz"></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
